@@ -1,3 +1,5 @@
+'use strict';
+
 const fs = require('fs/promises');
 const { join } = require('path');
 
@@ -27,15 +29,16 @@ const calculateNumOfLines = async (path, log = false) => {
          const numberOfLines =
             content.toString().replace(/[^\r\n]/g, '').length / 2 + 1;
          totalNumOfLines += numberOfLines;
-         log && console.log('File', fullPath + ':', numberOfLines);
+
+         if (log) console.log('File', fullPath + ':', numberOfLines);
       } else {
          if (ignores.includes(file)) continue;
          const numberOfLines = await calculateNumOfLines(fullPath);
          totalNumOfLines += numberOfLines;
-         log && console.log('Directory', fullPath + ':', numberOfLines);
+         if (log) console.log('Directory', fullPath + ':', numberOfLines);
       }
    }
-   log &&
+   if (log)
       console.log(
          '\r\nTotal number of lines for html/css/js files\r\n',
          `\b${path}:`,
