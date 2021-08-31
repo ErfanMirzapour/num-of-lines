@@ -1,3 +1,8 @@
+# num-of-lines
+[![npm version](https://badgen.net/npm/v/num-of-lines)](https://npmjs.com/package/num-of-lines)
+[![minified size](https://badgen.net/bundlephobia/min/num-of-lines)](https://bundlephobia.com/package/num-of-lines)
+[![dependency count](https://badgen.net/bundlephobia/dependency-count/num-of-lines)](https://bundlephobia.com/package/num-of-lines)
+
 Calculate total number of code lines in a specified directory.
 
 > Currently it's written for front-end projects and only counts these files:
