@@ -1,0 +1,19 @@
+{
+   "name": "num-of-lines",
+   "version": "0.1.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/ErfanMirzapour/num-of-lines.git"
+   },
+   "author": "Erfan Mirzapour <erfanmirzapour1@gmail.com> (https://github.com/ErfanMirzapour)",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/ErfanMirzapour/num-of-lines/issues"
+   },
+   "homepage": "https://github.com/ErfanMirzapour/num-of-lines"
+}
