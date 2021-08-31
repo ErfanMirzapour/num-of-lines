@@ -25,7 +25,7 @@ const calculateNumOfLines = async (path, log = false) => {
 
          const content = await fs.readFile(fullPath);
          const numberOfLines =
-            content.toString().replace(/[^\r\n]/g, '').length / 2;
+            content.toString().replace(/[^\r\n]/g, '').length / 2 + 1;
          totalNumOfLines += numberOfLines;
          log && console.log('File', fullPath + ':', numberOfLines);
       } else {
