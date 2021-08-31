@@ -20,16 +20,17 @@ Calculate total number of code lines in a specified directory.
 
 -  npm
 
-```
-npm install num-of-lines
+```shell
+$ npm install num-of-lines
 ```
 
 -  yarn
 
-```
-yarn add num-of-lines
+```shell
+$ yarn add num-of-lines
 ```
 
+## Usage
 ```js
 // ~/project/nol.js
 const { calculateNumOfLines } = require('num-of-lines');
