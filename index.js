@@ -37,8 +37,8 @@ const calculateNumOfLines = async (path, log = false) => {
    }
    log &&
       console.log(
-         '\r\nTotal number of lines for html/css/js files inside',
-         path + ':\r\n',
+         '\r\nTotal number of lines for html/css/js files\r\n',
+         `\b${path}:`,
          totalNumOfLines
       );
    return totalNumOfLines;
