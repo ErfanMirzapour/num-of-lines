@@ -1,23 +1,17 @@
 'use strict';
 
+const cwd = process.cwd();
 const fs = require('fs/promises');
 const { join } = require('path');
-
-const ignores = [
-   '.git',
-   'node_modules',
-   '.vscode',
-   '.nuxt',
-   'build',
-   'dist',
-   'coverage',
-];
+const dotgit = require('dotgitignore')({ cwd });
 
 const calculateNumOfLines = async (path, log = false) => {
    const files = await fs.readdir(path);
    let totalNumOfLines = 0;
 
    for (const file of files) {
+      if (dotgit.ignore(file)) continue;
+
       const fullPath = join(path, file);
       const stat = await fs.lstat(fullPath);
 
@@ -47,4 +41,4 @@ const calculateNumOfLines = async (path, log = false) => {
    return totalNumOfLines;
 };
 
-module.exports = calculateNumOfLines;
+module.exports = () => calculateNumOfLines(cwd, true);
