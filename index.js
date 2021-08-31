@@ -44,4 +44,4 @@ const calculateNumOfLines = async (path, log = false) => {
    return totalNumOfLines;
 };
 
-module.exports = { calculateNumOfLines };
+module.exports = calculateNumOfLines;

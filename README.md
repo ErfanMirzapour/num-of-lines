@@ -33,7 +33,7 @@ $ yarn add num-of-lines
 ## Usage
 ```js
 // ~/project/nol.js
-const { calculateNumOfLines } = require('num-of-lines');
+const calculateNumOfLines = require('num-of-lines');
 
 calculateNumOfLines(__dirname, true);
 
