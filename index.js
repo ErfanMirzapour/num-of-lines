@@ -1,7 +1,6 @@
-import { promises as fs } from 'fs';
-import { resolve, join } from 'path';
+const fs = require('fs/promises');
+const { join } = require('path');
 
-const __dirname = resolve();
 const ignores = [
    '.git',
    'node_modules',
@@ -45,4 +44,4 @@ const calculateNumOfLines = async (path, log = false) => {
    return totalNumOfLines;
 };
 
-calculateNumOfLines(__dirname, true);
+module.exports = { calculateNumOfLines };
